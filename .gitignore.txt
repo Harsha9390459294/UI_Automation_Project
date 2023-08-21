@@ -1,0 +1,7 @@
+.settings
+Logs
+Reports
+Screenshots
+pom
+.project
+.classpath
