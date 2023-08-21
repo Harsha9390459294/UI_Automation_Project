@@ -20,7 +20,7 @@ public class AirBooking extends TestCasesBaseClass{
 		resultsPage.applyFilters();
 		resultsPage.BookFlight();
 		
-		//Add assertions, waits instead of sleep statements etc..
+		//To add assertions, waits instead of sleep statements etc..
 	}
 
 }
