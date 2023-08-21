@@ -11,7 +11,7 @@ public class AirBooking extends TestCasesBaseClass{
 	ResultsPage resultsPage;
 	
 	@Test
-	public void loginApplication() throws InterruptedException {
+	public void tc1_bookCostliestFlight() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.login();
 		homePage.inputTripDetails("Beng", "Hyd");

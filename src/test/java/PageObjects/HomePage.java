@@ -39,17 +39,28 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath = "//span[contains(@class,'sc-12foipm-39')][contains(text(),'From')]/following-sibling::input")
 	WebElement sourceBox;
 	
+	@FindBy(xpath = "//ul[@id='autoSuggest-list']//p/span")
+	List<WebElement> sourceList;
+	
+	
+	
 	@FindBy(xpath = "//span[contains(@class,'sc-12foipm-17')][contains(text(),'To')]/parent::div")
 	WebElement destWrapper;
 	
 	@FindBy(xpath = "//span[contains(@class,'sc-12foipm-39')][contains(text(),'To')]/following-sibling::input")
 	WebElement destBox;
 	
+	@FindBy(xpath = "//ul[@id='autoSuggest-list']//p/span")
+	List<WebElement> destList;
+	
 	@FindBy(xpath = "//span[contains(@class,'sc-12foipm-39')][contains(text(),'Destination')]/following-sibling::input")
 	WebElement calenderWrapper;
 	
 	@FindBy(xpath = "//span[contains(@aria-label,'Next Month')]")
 	WebElement calenderNextMonthButton;
+	
+	@FindBy(xpath = "//div[@class='DayPicker-Day']")
+	List<WebElement> days;
 	
 	@FindBy(xpath = "//span[@role='presentation'][contains(text(),'Done')]")
 	WebElement calenderDoneButton;
@@ -87,26 +98,11 @@ public class HomePage extends BaseClass {
 		Thread.sleep(2000);
 		sourceBox.sendKeys(source);
 		Thread.sleep(2000);	
-		List<WebElement> sourceList = driver.findElements(By.xpath("//ul[@id='autoSuggest-list']//p/span"));
-		for(WebElement item:sourceList) {
-			String airport = item.getText();
-			if(airport.contains(source)) {
-				item.click();
-				break;
-			}
-		}
+		clickFromList(sourceList,source);
 		Thread.sleep(2000);
 		destBox.sendKeys(dest);
 		Thread.sleep(2000);	
-		List<WebElement> destList = driver.findElements(By.xpath("//ul[@id='autoSuggest-list']//p/span"));
-		for(WebElement item:destList) {
-			String airport = item.getText();
-			if(airport.contains(dest)) {
-				item.click();
-				break;
-			}
-		}
-		
+		clickFromList(destList,dest);
 		Thread.sleep(2000);
 		calenderNextMonthButton.click();
 		calenderNextMonthButton.click();
@@ -117,15 +113,8 @@ public class HomePage extends BaseClass {
 		String today = Integer.toString(calendar.get(calendar.DATE));
 		calendar.add(Calendar.MONTH,3);
 		String laterMonth = Integer.toString(calendar.get(calendar.MONTH));
-		System.out.println(today+" "+ laterMonth);
-		List<WebElement> days = driver.findElements(By.xpath("//div[@class='DayPicker-Day']"));
-		for(WebElement day:days) {
-			String dayText = day.getText();
-			if(dayText.contains(today)&& dayText.contains(laterMonth)) {
-			day.click();
-			break;
-			}
-		}
+		
+		calenderSelectDate(days,today,laterMonth);
 		Thread.sleep(2000);
 		calenderDoneButton.click();
 		Thread.sleep(2000);
@@ -136,6 +125,26 @@ public class HomePage extends BaseClass {
 		System.out.println("Data submitted successfully");
 	}
 	
+	public void clickFromList(List<WebElement> list, String option) {
+		for(WebElement item:list) {
+			String airport = item.getText();
+			if(airport.contains(option)) {
+				item.click();
+				break;
+			}
+		}
+	}
 	
+	public void calenderSelectDate(List<WebElement> days, String today, String month) {
+		
+		//List<WebElement> days = driver.findElements(By.xpath("//div[@class='DayPicker-Day']"));
+		for(WebElement day:days) {
+			String dayText = day.getText();
+			if(dayText.contains(today)&& dayText.contains(month)) {
+			day.click();
+			break;
+			}
+		}
+	}
 	
 }

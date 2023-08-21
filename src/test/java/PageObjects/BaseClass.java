@@ -1,6 +1,8 @@
 package PageObjects;
 
-import org.openqa.selenium.WebDriver;
+import java.util.*;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 
 public class BaseClass {
@@ -12,5 +14,14 @@ public class BaseClass {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
