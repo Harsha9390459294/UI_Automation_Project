@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-21T18:29:14 IST" name="Suite" finished-at="2023-08-21T18:30:32 IST" duration-ms="78046">
+  <suite started-at="2023-08-21T18:51:14 IST" name="Default suite" finished-at="2023-08-21T18:52:31 IST" duration-ms="77038">
     <groups>
     </groups>
-    <test started-at="2023-08-21T18:29:14 IST" name="Test" finished-at="2023-08-21T18:30:32 IST" duration-ms="78046">
+    <test started-at="2023-08-21T18:51:14 IST" name="Default test" finished-at="2023-08-21T18:52:31 IST" duration-ms="77038">
       <class name="TestCases.AirBooking">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.AirBooking@3e694b3f]" started-at="2023-08-21T18:29:14 IST" name="setup" finished-at="2023-08-21T18:29:20 IST" duration-ms="5310" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.AirBooking@65fb9ffc]" started-at="2023-08-21T18:51:14 IST" name="setup" finished-at="2023-08-21T18:51:19 IST" duration-ms="4493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="tc1_bookCostliestFlight()[pri:0, instance:TestCases.AirBooking@3e694b3f]" started-at="2023-08-21T18:29:20 IST" name="tc1_bookCostliestFlight" finished-at="2023-08-21T18:30:32 IST" duration-ms="72180" status="FAIL">
+        <test-method signature="tc1_bookCostliestFlight()[pri:0, instance:TestCases.AirBooking@65fb9ffc]" started-at="2023-08-21T18:51:19 IST" name="tc1_bookCostliestFlight" finished-at="2023-08-21T18:52:31 IST" duration-ms="72328" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button"}
@@ -20,9 +20,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6617233a58c2703e973e58928b545255, findElement {using=xpath, value=//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\TechGeek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55034}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55034/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6617233a58c2703e973e58928b545255]]>
+Command: [c5ebc8fcba2783576181e2cf0ef330ca, findElement {using=xpath, value=//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\TechGeek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55350/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5ebc8fcba2783576181e2cf0ef330ca]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button"}
@@ -31,9 +31,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6617233a58c2703e973e58928b545255, findElement {using=xpath, value=//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\TechGeek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55034}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55034/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6617233a58c2703e973e58928b545255
+Command: [c5ebc8fcba2783576181e2cf0ef330ca, findElement {using=xpath, value=//*[@id='root']/div[2]/div/div[1]/div[3]/div[2]/div/div[2]/div[2]/div[2]/div/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.97, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\TechGeek\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55350}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55350/devtoo..., se:cdpVersion: 116.0.5845.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5ebc8fcba2783576181e2cf0ef330ca
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -52,7 +52,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
 at PageObjects.ResultsPage.BookFlight(ResultsPage.java:53)
 at TestCases.AirBooking.tc1_bookCostliestFlight(AirBooking.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -89,11 +89,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc1_bookCostliestFlight -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AirBooking@3e694b3f]" started-at="2023-08-21T18:30:32 IST" name="tearDown" finished-at="2023-08-21T18:30:32 IST" duration-ms="130" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.AirBooking@65fb9ffc]" started-at="2023-08-21T18:52:31 IST" name="tearDown" finished-at="2023-08-21T18:52:31 IST" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.AirBooking -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

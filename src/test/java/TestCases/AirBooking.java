@@ -14,7 +14,7 @@ public class AirBooking extends TestCasesBaseClass{
 	public void tc1_bookCostliestFlight() throws InterruptedException {
 		homePage = new HomePage(driver);
 		homePage.login();
-		homePage.inputTripDetails("Beng", "Hyd");
+		homePage.inputTripDetails(rb.getString("source"), rb.getString("dest"));
 		Thread.sleep(25000);
 		resultsPage = new ResultsPage(driver);
 		resultsPage.applyFilters();
