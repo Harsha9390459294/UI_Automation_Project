@@ -1,5 +1,8 @@
 package TestCases;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,10 +18,15 @@ public class ListenerForExtentReport implements ITestListener {
 	public ExtentSparkReporter sparkReporter;  // UI of the report
 	public ExtentReports extent;  //populate common info on the report
 	public ExtentTest test; // creating test case entries in the report and update status of the test methods
+	
+	String repName;
 
 	public void onStart(ITestContext context) {
+		
+		String timeStamp = new SimpleDateFormat("yyyy.MM.DD.HH.mm").format(new Date());
+		repName = ("Test_Report"+timeStamp+".html");
 			
-		sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+ "/Reports/myReport.html");//specify location of the report
+		sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+ "/Reports/repName.html");//specify location of the report
 		
 		sparkReporter.config().setDocumentTitle("Automation Report"); // TiTle of report
 		sparkReporter.config().setReportName("Functional Testing"); // name of the report
@@ -34,6 +42,8 @@ public class ListenerForExtentReport implements ITestListener {
 		extent.setSystemInfo("Browser name","Chrome");
 					
 	}
+	
+	
 
 
 	public void onTestSuccess(ITestResult result) {
@@ -48,6 +58,16 @@ public class ListenerForExtentReport implements ITestListener {
 		test = extent.createTest(result.getName());
 		test.log(Status.FAIL, "Test case FAILED is:" + result.getName());
 		test.log(Status.FAIL, "Test Case FAILED cause is: " + result.getThrowable()); 
+		
+		try {
+			String imgPath = new TestCasesBaseClass().CaptureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 					
 	}
 
