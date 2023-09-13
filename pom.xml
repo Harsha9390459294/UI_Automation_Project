@@ -65,14 +65,19 @@
     	<groupId>org.apache.logging.log4j</groupId>
     	<artifactId>log4j-core</artifactId>
     	<version>2.20.0</version>
-   </dependency> 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+   </dependency>
+
+
+
+
+
+
+
+   <dependency>
+   	<groupId>HarshaMavenBuild</groupId>
+   	<artifactId>HarshaMavenbuild</artifactId>
+   	<version>0.0.1-SNAPSHOT</version>
+   </dependency>
   </dependencies>
   
   

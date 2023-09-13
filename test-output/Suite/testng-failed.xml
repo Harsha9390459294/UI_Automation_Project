@@ -8,8 +8,8 @@
     <classes>
       <class name="TestCases.AirBooking">
         <methods>
-          <include name="tc1_bookCostliestFlight"/>
           <include name="setup"/>
+          <include name="tc1_bookCostliestFlight"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.AirBooking -->
